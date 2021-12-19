@@ -43,4 +43,7 @@ public class EmailValidation {
         register.ValidateEmail();
 
     }
+    public boolean EmailValidate(String emailValidate, boolean expectedResult) {
+        return emailValidate.matches("^[a-zA-Z]+([._+-]{0,1}[a-zA-Z0-9]+)*@[a-zA-Z0-9]+.[a-zA-Z]{2,4}+(?:\\.[a-z]{2,}){0,1}$");
+    }
 }
