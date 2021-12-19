@@ -1,0 +1,39 @@
+package com.bridgelabz.UserRegistrationProblem.UserRegistrationProblemTest;
+
+
+import org.testng.annotations.Test;
+
+public class UserValidation {
+
+    public String AnalyseMood(String message) {
+        if(message.contains("Sad"))
+            return "SAD";
+        return "HAPPY";
+    }
+    @Test
+    public void PrintWelcomeMessage() {
+        System.out.println("Welcome to the User Validation Problem");
+    }
+    @Test
+    public boolean ValidateFirstName(String firstName) {
+        return firstName.matches("([A-Z][a-z]{2,})");
+    }
+    @Test
+    public boolean ValidateLastName(String lastName) {
+        return lastName.matches("([A-Z][a-z]{2,})");
+    }
+    @Test
+    public boolean ValidateEmail(String email) {
+        return email.matches("(^[a-zA-Z]+([._+-]{0,1}[a-zA-Z0-9]+)*@[a-zA-Z0-9]+.[a-zA-Z]{2,4}+(?:\\.[a-z]{2,}){0,1}$)");
+    }
+    @Test
+    public boolean ValidatePhoneNumber(String phoneNumber) {
+        return phoneNumber.matches("(([0-9]{2})?)[ ][0-9]{10}");
+    }
+    @Test
+    public boolean ValidatePassword(String password) {
+        return password.matches("((^(?=.*[A-Z]))(?=.*[0-9])(?=.*[a-z])(?=.*[@*&^%#-*+!]{1}).{8,}$)");
+    }
+
+
+}
