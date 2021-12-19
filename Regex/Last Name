@@ -1,0 +1,18 @@
+package com.bridgelabz.Regex;
+
+import java.util.Scanner;
+
+public class lastName {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter your Last Name: ");
+        String phone = sc.next();
+        String regex ="([a-zA-Z][A-Z]*){0,2}$";
+        boolean result = phone.matches(regex);
+        if(result) {
+            System.out.println("Given Last Name is valid");
+        } else {
+            System.out.println("Given Last Name is not valid");
+        }
+    }
+}
